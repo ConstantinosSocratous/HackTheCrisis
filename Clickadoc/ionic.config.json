@@ -1,5 +1,7 @@
 {
   "name": "Clickadoc",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

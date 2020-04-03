@@ -7,7 +7,7 @@
           <ion-note>hi@ionicframework.com</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+            <ion-item (click)="menuSelected(i)" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="menuIndex == i">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
@@ -25,5 +25,15 @@
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
+
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button *ngFor="let p of tabPages; let k = index" (click)="tabSelected(k)" routerDirection="root" [routerLink]="[p.url]">
+          <ion-icon name="{{ p.icon }}"></ion-icon>
+          <ion-label>{{ p.title }}</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+    
   </ion-split-pane>
 </ion-app>

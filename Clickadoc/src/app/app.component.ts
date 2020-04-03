@@ -10,37 +10,32 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public selectedIndex = 0;
+  public menuIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
+      title: 'page1',
+      url: 'page1',
       icon: 'mail'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
+      title: 'page2',
+      url: 'page2',
       icon: 'paper-plane'
     },
+    
+  ];
+
+  public tabIndex = -1
+  public tabPages = [
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
+      title: 'tabpage1',
+      url: 'tabpage1',
       icon: 'heart'
     },
     {
-      title: 'Archived',
-      url: '/folder/Archived',
+      title: 'tabpage2',
+      url: 'tabpage2',
       icon: 'archive'
-    },
-    {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
-    },
-    {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
@@ -61,9 +56,21 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    const path = window.location.pathname.split('folder/')[1];
+    const path = window.location.pathname.split('folder/')[0];
     if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+      this.menuIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
+  }
+
+  menuSelected(i){
+    this.menuIndex = i;
+    this.tabIndex = -1;
+    // console.log(this.menuIndex + " || " + this.tabIndex);
+  }
+
+  tabSelected(i){
+    this.menuIndex = -1;
+    this.tabIndex = i;
+    // console.log(this.menuIndex + " || " + this.tabIndex);  
   }
 }
