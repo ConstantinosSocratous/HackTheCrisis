@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-page1',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page1Component implements OnInit {
 
-  constructor() { }
+  username: String;
+  pastActivity: Array<any>;
+
+  constructor(private user: UserService) {
+    this.username = this.user.username
+    this.pastActivity = this.user.pastActivity
+  }
 
   ngOnInit() {}
 

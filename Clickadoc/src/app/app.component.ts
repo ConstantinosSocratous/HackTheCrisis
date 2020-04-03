@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AuthService } from './services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -43,7 +45,9 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private authService: AuthService,
+    private router: Router
   ) {
     this.initializeApp();
   }
@@ -56,10 +60,13 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    const path = window.location.pathname.split('folder/')[0];
-    if (path !== undefined) {
-      this.menuIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
+    // this.menuSelected(0)
+    // this.router.navigate['page1']
+
+    // const path = window.location.pathname.split('folder/')[0];
+    // if (path !== undefined) {
+    //   this.menuIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    // }
   }
 
   menuSelected(i){
@@ -72,5 +79,9 @@ export class AppComponent implements OnInit {
     this.menuIndex = -1;
     this.tabIndex = i;
     // console.log(this.menuIndex + " || " + this.tabIndex);  
+  }
+
+  isAuthenticated(){
+    return this.authService.isLoggedIn
   }
 }

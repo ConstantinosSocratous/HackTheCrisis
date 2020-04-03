@@ -15,7 +15,20 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">PAGE1</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-list>
+      <ion-item *ngFor="let past of pastActivity">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>{{ past.date }}</ion-card-subtitle>
+            <ion-card-title>{{ past.doctor }}</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            {{ past.notes }}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+
   </div>
 </ion-content>

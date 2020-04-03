@@ -4,28 +4,38 @@ import { Page1Component } from './menuPages/page1/page1.component';
 import { Page2Component } from './menuPages/page2/page2.component';
 import { TabPage1Component } from './tabPages/tab-page1/tab-page1.component';
 import { TabPage2Component } from './tabPages/tab-page2/tab-page2.component';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './services/auth.service';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'page1',
-    pathMatch: 'full'
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: 'page1',
-    component: Page1Component
+    component: Page1Component,
+    canActivate: [AuthService]
   },
   {
     path: 'page2',
-    component: Page2Component
+    component: Page2Component,
+    canActivate: [AuthService]
   },
   {
     path: 'tabpage1',
-    component: TabPage1Component
+    component: TabPage1Component,
+    canActivate: [AuthService]
   },
   {
     path: 'tabpage2',
-    component: TabPage2Component
+    component: TabPage2Component,
+    canActivate: [AuthService]
+  },
+  {
+    path: '**',
+    redirectTo: 'login',
+    pathMatch: 'full'
   },
 
   // {
