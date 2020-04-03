@@ -14,6 +14,11 @@ export class UserService {
     { doctor: 'John', date: '02/02/2020', notes: 'bla bla blabla bla blabla bla bladsfdsfdsfdsfdsf'}, 
   ]
 
+  pastNotes: Array<any> = [
+    {text: 'Registration form', date: '03/04/2020', image: 'https://i.pinimg.com/originals/f7/af/84/f7af847272e17fc3a2777324d6478ea5.png'},
+    {text: 'Questionnaire about syptoms', date: '23/04/2020', image: 'https://i.pinimg.com/originals/f7/af/84/f7af847272e17fc3a2777324d6478ea5.png'},
+  ]
+
   constructor() { }
 
   

@@ -14,8 +14,27 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">tab1</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let note of previousNotes">
+        <ion-card>
+          <ion-card-header>
+              <ion-img [src]="note.image"  (click)="fullscreen(note)"></ion-img>
+            <ion-card-subtitle>{{ note.date }}</ion-card-subtitle>
+            <!-- <ion-card-title>Card Title</ion-card-title> -->
+          </ion-card-header>
+        
+          <ion-card-content>
+            {{note.text}}
+          </ion-card-content>
+        </ion-card>     
+      </ion-slide>
+     </ion-slides>
   </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
