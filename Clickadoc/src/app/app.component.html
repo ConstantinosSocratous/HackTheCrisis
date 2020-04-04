@@ -1,7 +1,7 @@
 <ion-app>
 
   <div>
-    <ion-split-pane contentId="main-content" [hidden]="!isAuthenticated()">
+    <ion-split-pane contentId="main-content" *ngIf="isAuthenticated()">
 
       <ion-menu contentId="main-content" type="overlay">
         <ion-content>
@@ -30,7 +30,7 @@
   
       <ion-router-outlet id="main-content"></ion-router-outlet>
   
-      <ion-tabs id="main-content" [hidden]="!isAuthenticated()">
+      <ion-tabs id="main-content">
         <ion-tab-bar slot="bottom">
           <ion-tab-button *ngFor="let p of tabPages; let k = index" (click)="tabSelected(k)" routerDirection="root" [routerLink]="[p.url]">
             <ion-icon name="{{ p.icon }}"></ion-icon>
@@ -40,6 +40,16 @@
       </ion-tabs>
       
     </ion-split-pane>
+    
+    <div *ngIf="!isAuthenticated()">
+      <ion-router-outlet></ion-router-outlet>
+    </div>
+
+    <!-- <app-login [hidden]="isAuthenticated()"></app-login> -->
+
   </div>
 
+
+  <!-- <div>
+  </div> -->
 </ion-app>

@@ -30,14 +30,14 @@ export class AppComponent implements OnInit {
   public tabIndex = -1
   public tabPages = [
     {
-      title: 'tabpage1',
+      title: 'Notes',
       url: 'tabpage1',
-      icon: 'heart'
+      icon: 'send-outline'
     },
     {
-      title: 'tabpage2',
+      title: 'Appointments',
       url: 'tabpage2',
-      icon: 'archive'
+      icon: 'calendar-outline'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

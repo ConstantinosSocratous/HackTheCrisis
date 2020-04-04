@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { FormsModule } from '@angular/forms';
+import { AlertController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +19,8 @@ import { TabPage2Component } from './tabPages/tab-page2/tab-page2.component';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
+import { NotesComponent } from './modals/notes.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +29,16 @@ import { LoginComponent } from './login/login.component';
     Page2Component, 
     TabPage1Component, 
     TabPage2Component,
-    LoginComponent
+    LoginComponent,
+    NotesComponent,
+    RegisterComponent
   ],
-  entryComponents: [],
+  entryComponents: [NotesComponent],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
-    AppRoutingModule
+    IonicModule.forRoot({animated: false}),
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     StatusBar,
@@ -38,7 +46,10 @@ import { LoginComponent } from './login/login.component';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     UserService,
     AuthService,
-    PhotoViewer
+    PhotoViewer,
+    Camera,
+    AlertController,
+    LoadingController
   ],
   bootstrap: [AppComponent]
 })

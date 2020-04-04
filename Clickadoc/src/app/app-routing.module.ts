@@ -6,11 +6,16 @@ import { TabPage1Component } from './tabPages/tab-page1/tab-page1.component';
 import { TabPage2Component } from './tabPages/tab-page2/tab-page2.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './services/auth.service';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
     path: 'login',
-    component: LoginComponent,
+    component: LoginComponent
   },
   {
     path: 'page1',
@@ -87,7 +92,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules})
   ],
   exports: [RouterModule]
 })

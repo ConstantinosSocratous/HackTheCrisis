@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>tab1</ion-title>
+    <ion-title>Past notes sent</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -33,7 +33,7 @@
   </div>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
+    <ion-fab-button (click)="showModal()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
