@@ -56,7 +56,36 @@
       <ion-button shape="round" (click)="submit()">Submit</ion-button>
     </ion-list>
     
-
+    <div *ngIf="requestedAppointments.length != 0">
+    <ion-list>
+      <ion-list-header>
+        Upcoming appointments
+      </ion-list-header>
+      <ion-item *ngFor="let appointment of requestedAppointments; let i = index">
+        <ion-grid>
+          <ion-row>
+            <ion-col><b>Reason:</b>{{ appointment.reason }}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>{{ appointment.date }} - {{ appointment.time }}</ion-col>
+          </ion-row>
+          <ion-row *ngIf="appointment.status != 'Scheduled'">
+            <ion-col  style="color:orange;" size="9">{{appointment.status}}</ion-col>
+            <ion-col size="1" offset="2">
+              <ion-icon name="trash-outline" (click)="cancel(i)"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row *ngIf="appointment.status === 'Scheduled'">
+            
+            <ion-col style="color:green;" size="9">{{appointment.status}}</ion-col>
+            <ion-col size="1" offset="2" *ngIf="appointment.status != 'Scheduled'"></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      
+    </ion-list>
+  </div>
+    
     <!-- <ion-list lines="none" *ngIf="requestedAppointments.length != 0">
       <ion-list-header>
         All requests
