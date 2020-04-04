@@ -7,13 +7,13 @@ import { UserService } from './user.service';
 })
 export class AuthService implements CanActivate{
 
-  isLoggedIn: boolean = false
+  isLoggedIn: boolean = true
 
   constructor(private router: Router, private user: UserService) { }
 
   canActivate(){
     if(!this.isLoggedIn){
-      this.router.navigate['login']
+      this.router.navigate(['login'])
 
       return false;
     }

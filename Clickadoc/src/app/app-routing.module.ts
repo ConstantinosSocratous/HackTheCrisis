@@ -7,6 +7,7 @@ import { TabPage2Component } from './tabPages/tab-page2/tab-page2.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './services/auth.service';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './menuPages/home/home.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [AuthService]
   },
   {
     path: 'page1',
@@ -28,18 +34,18 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path: 'tabpage1',
+    path: 'notes',
     component: TabPage1Component,
     canActivate: [AuthService]
   },
   {
-    path: 'tabpage2',
+    path: 'book',
     component: TabPage2Component,
     canActivate: [AuthService]
   },
   {
     path: '**',
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
 

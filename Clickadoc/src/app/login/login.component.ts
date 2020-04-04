@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     if(this.auth.isLoggedIn){
-      this.navigateTo('page1') // Home
+      this.navigateTo('home')
     }
   }
 
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     let result = this.auth.login(values.gesy, values.password)
 
     if(result){
-      this.navigateTo('page1')
+      this.navigateTo('home')
     }
   }
 

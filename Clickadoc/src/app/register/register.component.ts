@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
     let result = this.auth.register(values.name, values.email, values.password, values.gesy)
 
     if(result){
-      this.navigateTo('page1')
+      this.navigateTo('home')
     }
   }
 }

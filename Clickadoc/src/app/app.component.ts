@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthService } from './services/auth.service';
 import { Router } from '@angular/router';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -15,14 +16,19 @@ export class AppComponent implements OnInit {
   public menuIndex = 0;
   public appPages = [
     {
-      title: 'page1',
-      url: 'page1',
-      icon: 'mail'
+      title: 'My Account',
+      url: 'home',
+      icon: 'home' 
     },
     {
-      title: 'page2',
+      title: 'Past Appointments',
+      url: 'page1',
+      icon: 'archive'
+    },
+    {
+      title: 'Health Services',
       url: 'page2',
-      icon: 'paper-plane'
+      icon: 'medkit'
     },
     
   ];
@@ -31,12 +37,12 @@ export class AppComponent implements OnInit {
   public tabPages = [
     {
       title: 'Notes',
-      url: 'tabpage1',
+      url: 'notes',
       icon: 'send-outline'
     },
     {
-      title: 'Appointments',
-      url: 'tabpage2',
+      title: 'Book',
+      url: 'book',
       icon: 'calendar-outline'
     }
   ];
@@ -47,7 +53,8 @@ export class AppComponent implements OnInit {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private user: UserService
   ) {
     this.initializeApp();
   }
@@ -83,5 +90,10 @@ export class AppComponent implements OnInit {
 
   isAuthenticated(){
     return this.authService.isLoggedIn
+  }
+
+  logout(){
+    this.authService.isLoggedIn = false
+    this.router.navigate([''])
   }
 }

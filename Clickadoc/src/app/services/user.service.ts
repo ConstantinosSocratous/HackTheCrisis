@@ -22,6 +22,9 @@ export class UserService {
   gesy: String = "123456"
   email: String = "myemail@gmail.com"
 
+  personalDoctor: string = "George Something"
+  personalDoctorCode: string = "GP12032"
+  personalDoctorPhone: string = "99123456"
   constructor() { }
 
   getData(gesy){

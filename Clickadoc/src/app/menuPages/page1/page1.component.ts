@@ -8,11 +8,11 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class Page1Component implements OnInit {
 
-  username: String;
+  name: String;
   pastActivity: Array<any>;
 
   constructor(private user: UserService) {
-    this.username = this.user.username
+    this.name = this.user.name
     this.pastActivity = this.user.pastActivity
   }
 
