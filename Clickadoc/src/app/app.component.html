@@ -6,7 +6,8 @@
     <ion-tab-bar slot="bottom">
       <ion-tab-button *ngFor="let p of tabPages; let k = index" (click)="tabSelected(k)" routerDirection="root" [routerLink]="[p.url]">
         <ion-img [src]="p.icon"></ion-img>
-        <ion-label>{{ p.title }}</ion-label>
+        <ion-label *ngIf="k === tabIndex"><b>{{ p.title }}</b></ion-label>
+        <ion-label *ngIf="k != tabIndex">{{ p.title }}</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>

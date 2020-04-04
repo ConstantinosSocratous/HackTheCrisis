@@ -23,6 +23,7 @@ import { NotesComponent } from './modals/notes.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { IntroComponent } from './intro/intro.component';
     NotesComponent,
     RegisterComponent,
     HomeComponent,
-    IntroComponent
+    IntroComponent,
+    ChatComponent
   ],
   entryComponents: [NotesComponent],
   imports: [

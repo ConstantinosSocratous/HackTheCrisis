@@ -9,6 +9,7 @@ import { AuthService } from './services/auth.service';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
+import { ChatComponent } from './chat/chat.component'
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
     path: 'book',
     component: TabPage2Component,
     canActivate: [AuthService]
+  },
+  {
+    path: 'chat',
+    component: ChatComponent
   },
   {
     path: '**',
