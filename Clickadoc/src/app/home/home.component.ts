@@ -8,6 +8,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HomeComponent implements OnInit {
 
+  logoPath = "../../assets/logo.png"
+
   constructor(private user: UserService) { }
 
   ngOnInit() {}

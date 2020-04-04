@@ -1,0 +1,37 @@
+// ion-item{
+//     --background: #dde5f3;
+//     --color: rgb(0, 0, 0);
+// }
+
+.myitem{
+    // --background: rgb(13,6,81);
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: 50%;
+    margin:20% auto;
+}
+
+.mybtn{
+    margin-top:10% auto;
+}
+
+ion-button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    --border-color: rgb(15, 193,167);
+    color:rgb(15, 193,167);
+}
+
+ion-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    // margin-top: 20%;
+    width: 200px; 
+    height: 200px;
+}
+
+ion-label{
+    text-align: center;
+}

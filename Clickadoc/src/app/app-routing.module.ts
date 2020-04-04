@@ -7,9 +7,14 @@ import { TabPage2Component } from './tabPages/tab-page2/tab-page2.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './services/auth.service';
 import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './menuPages/home/home.component';
+import { HomeComponent } from './home/home.component';
+import { IntroComponent } from './intro/intro.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: IntroComponent
+  },
   {
     path: 'register',
     component: RegisterComponent
@@ -47,7 +52,7 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'home',
     pathMatch: 'full'
-  },
+  }
 
   // {
   //   path: 'tabs',

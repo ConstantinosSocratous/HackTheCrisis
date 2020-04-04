@@ -1,0 +1,42 @@
+.myitem{
+    // --background: rgb(13,6,81);
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: 50%;
+    margin:5% auto;
+    --background: transparent;
+}
+
+
+.ltl{
+    font-size: x-large;
+    --background: transparent;
+}
+
+.logoimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px; 
+    height: 150px;
+    --background: transparent;
+}
+
+.btnimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px; 
+    height: 100px;
+    background: white;
+    border-radius: 20% !important;
+    border: hidden 1px rgb(208,208,208);
+}
+
+ion-label{
+    text-align: center;
+}
+
+ion-content{
+    --background:rgb(208,208,208);
+}

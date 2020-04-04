@@ -21,7 +21,8 @@ import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
 import { NotesComponent } from './modals/notes.component';
 import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './menuPages/home/home.component';
+import { HomeComponent } from './home/home.component';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HomeComponent } from './menuPages/home/home.component';
     LoginComponent,
     NotesComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    IntroComponent
   ],
   entryComponents: [NotesComponent],
   imports: [

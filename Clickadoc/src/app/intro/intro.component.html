@@ -1,0 +1,23 @@
+
+
+<!-- <ion-img  [src]="this.logoPath"></ion-img> -->
+<ion-content>
+ 
+
+  <ion-item class="myitem" lines="none"> 
+    <ion-img  [src]="this.logoPath"></ion-img>
+  </ion-item>
+
+  <ion-item class="mybtn" lines="none"> 
+    <ion-button fill="outline" shape="round" size="large" (click)="navigateTo('register')">Sign up</ion-button>
+  </ion-item>
+
+  <ion-item lines="none"> 
+    <ion-button fill="outline" shape="round" size="large" (click)="navigateTo('login')">Log in</ion-button>
+  </ion-item>
+
+  <ion-item lines="none" > 
+    <ion-label class="ion-text-wrap">By using Clickadoc you agree to the <a>Terms & Conditions</a></ion-label>
+  </ion-item>
+
+</ion-content>

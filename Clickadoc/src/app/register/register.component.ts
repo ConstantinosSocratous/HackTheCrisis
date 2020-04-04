@@ -8,7 +8,6 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  logoPath = "../../assets/logo.png"
 
   constructor(private router: Router, private auth: AuthService) { }
 

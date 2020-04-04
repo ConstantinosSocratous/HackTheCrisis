@@ -11,7 +11,6 @@ import { LoadingController } from '@ionic/angular';
 export class LoginComponent implements OnInit {
 
   loader: any = null 
-  logoPath = "../../assets/logo.png"
 
   constructor(private auth: AuthService, private router: Router, private loadingController: LoadingController) {
     

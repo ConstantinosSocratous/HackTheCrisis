@@ -1,8 +1,5 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
     <ion-title>Past notes sent</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -21,7 +18,7 @@
           <ion-card-header>
               <ion-img [src]="note.image" (click)="fullscreen(note)"></ion-img>
             <ion-card-subtitle>{{ note.date }}</ion-card-subtitle>
-            <!-- <ion-card-title>Card Title</ion-card-title> -->
+
           </ion-card-header>
         
           <ion-card-content>
@@ -32,9 +29,11 @@
      </ion-slides>
   </div>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="showModal()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
-  </ion-fab>
+  </ion-fab> -->
+
+
 </ion-content>

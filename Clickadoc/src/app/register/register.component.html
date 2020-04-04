@@ -1,5 +1,5 @@
 
-<ion-img  [src]="this.logoPath"></ion-img>
+<!-- <ion-img  [src]="this.logoPath"></ion-img>
 
 <div id="container">
   <form #form="ngForm" (ngSubmit)="register(form)" >
@@ -37,4 +37,36 @@
       
     </ion-grid>
   </form>
-</div>
+</div> -->
+
+<div id="container">
+
+  <ion-item lines="none">
+    <ion-label class="ion-text-wrap ttl">Create an account</ion-label>
+  </ion-item>
+
+
+  <form  #form="ngForm" (ngSubmit)="register(form)">
+
+    <ion-item class="inputitem" lines="none">
+      <ion-input name="name" type="text" placeholder="Name" ngModel required></ion-input>
+    </ion-item>
+    <ion-item class="inputitem" lines="none">
+      <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+    </ion-item>
+    <ion-item class="inputitem" lines="none">
+      <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+    </ion-item>
+    <ion-item class="inputitem" lines="none">
+      <ion-input name="gesy" type="text" placeholder="GESY ID" ngModel required></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-button fill="outline" shape="round" size="large" type="submit" expand="block">Register</ion-button>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label class="ion-text-wrap">Already have an account? <a (click)="navigateTo('login')">Login</a></ion-label>
+    </ion-item>
+  </form>
+  <div>

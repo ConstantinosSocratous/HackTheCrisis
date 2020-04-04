@@ -13,40 +13,49 @@ import { UserService } from './services/user.service';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public menuIndex = 0;
-  public appPages = [
-    {
-      title: 'My Account',
-      url: 'home',
-      icon: 'home' 
-    },
-    {
-      title: 'Past Appointments',
-      url: 'page1',
-      icon: 'archive'
-    },
-    {
-      title: 'Health Services',
-      url: 'page2',
-      icon: 'medkit'
-    },
+  // public menuIndex = 0;
+  // public appPages = [
+  //   {
+  //     title: 'My Account',
+  //     url: 'home',
+  //     icon: 'home' 
+  //   },
+  //   {
+  //     title: 'Past Appointments',
+  //     url: 'page1',
+  //     icon: 'archive'
+  //   },
+  //   {
+  //     title: 'Health Services',
+  //     url: 'page2',
+  //     icon: 'medkit'
+  //   },
     
-  ];
+  // ];
 
-  public tabIndex = -1
+  public tabIndex = 3
   public tabPages = [
     {
-      title: 'Send Notes',
-      url: 'notes',
-      icon: 'send-outline'
+      title: 'PROFILE',
+      url: 'profile',
+      icon: '../assets/PROFILE.png'
     },
     {
-      title: 'Book Appointment',
-      url: 'book',
-      icon: 'calendar-outline'
+      title: 'CALENDAR',
+      url: '#',
+      icon: '../assets/CALENDAR.png'
+    },
+    {
+      title: 'HISTORY',
+      url: 'page1',
+      icon: '../assets/HISTORY.png'
+    },
+    {
+      title: 'SERVICES',
+      url: 'home',
+      icon: '../assets/SERVICES.png'
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
   constructor(
     private platform: Platform,
@@ -67,25 +76,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.menuSelected(0)
-    // this.router.navigate['page1']
-
-    // const path = window.location.pathname.split('folder/')[0];
-    // if (path !== undefined) {
-    //   this.menuIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    // }
-  }
-
-  menuSelected(i){
-    this.menuIndex = i;
-    this.tabIndex = -1;
-    // console.log(this.menuIndex + " || " + this.tabIndex);
+    this.tabSelected(3)
   }
 
   tabSelected(i){
-    this.menuIndex = -1;
     this.tabIndex = i;
-    // console.log(this.menuIndex + " || " + this.tabIndex);  
   }
 
   isAuthenticated(){

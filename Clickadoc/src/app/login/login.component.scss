@@ -1,18 +1,22 @@
-ion-item{
-    --background: #dde5f3;
-    --color: rgb(0, 0, 0);
-}
+// ion-item{
+//     --background: #dde5f3;
+//     --color: rgb(0, 0, 0);
+// }
 
 ion-button{
-    --background: rgb(13,6,81);
-}
-
-ion-img {
-    display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20%;
-    width: 50%;
-    width: 100px; 
-    height: 100px;
-  }
+    width: 60%;
+    --border-color: rgb(13,6,81);
+    color:rgb(13,6,81);
+}
+
+.inputitem{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+ion-label{
+    text-align: center;
+}

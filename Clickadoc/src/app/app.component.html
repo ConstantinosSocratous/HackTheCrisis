@@ -1,62 +1,15 @@
 <ion-app>
+  <ion-router-outlet></ion-router-outlet>
 
-  <div>
-    <ion-split-pane contentId="main-content" *ngIf="isAuthenticated()">
-
-      <ion-menu contentId="main-content" type="overlay">
-        <ion-content>
-          <ion-list id="inbox-list">
-            <ion-list-header>ID: {{ user.gesy }}</ion-list-header>
-            <ion-note>{{ user.email }}</ion-note>
-  
-            <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-              <ion-item (click)="menuSelected(i)" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="menuIndex == i">
-                <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-                <ion-label>{{ p.title }}</ion-label>
-              </ion-item>
-            </ion-menu-toggle>
-          </ion-list>
-  
-          <!-- <ion-list id="labels-list">
-            <ion-list-header>Labels</ion-list-header>
-  
-            <ion-item *ngFor="let label of labels" lines="none">
-              <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-              <ion-label>{{ label }}</ion-label>
-            </ion-item>
-          </ion-list> -->
-        </ion-content>
-
-
-          <ion-item (click)="logout()" lines="none" detail="false">
-            <!-- <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon> -->
-            <ion-label><a style="color: rgb(15,193,167);">Logout</a></ion-label>
-          </ion-item>
-
-      </ion-menu>
-  
-      <ion-router-outlet id="main-content"></ion-router-outlet>
-  
-      <ion-tabs>
-        <ion-tab-bar slot="bottom">
-          <ion-tab-button *ngFor="let p of tabPages; let k = index" (click)="tabSelected(k)" routerDirection="root" [routerLink]="[p.url]"  [class.selected]="tabIndex == i">
-            <ion-icon name="{{ p.icon }}"></ion-icon>
-            <ion-label>{{ p.title }}</ion-label>
-          </ion-tab-button>
-        </ion-tab-bar>
-      </ion-tabs>
-      
-    </ion-split-pane>
-    
-    <div *ngIf="!isAuthenticated()">
-      <ion-router-outlet></ion-router-outlet>
-    </div>
-
-    <!-- <app-login [hidden]="isAuthenticated()"></app-login> -->
-
+  <div *ngIf="isAuthenticated()">
+    <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button *ngFor="let p of tabPages; let k = index" (click)="tabSelected(k)" routerDirection="root" [routerLink]="[p.url]">
+        <ion-img [src]="p.icon"></ion-img>
+        <ion-label>{{ p.title }}</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
   </div>
 
-
-  <!-- <div>
-  </div> -->
 </ion-app>
