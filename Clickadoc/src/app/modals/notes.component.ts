@@ -51,7 +51,7 @@ export class NotesComponent implements OnInit{
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
-      header: 'Confirm!',
+      header: 'Confirm',
       message: 'Send message to doctor?',
       buttons: [
         {
