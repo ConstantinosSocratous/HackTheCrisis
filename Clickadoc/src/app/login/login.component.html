@@ -1,10 +1,14 @@
+
+<ion-img  [src]="this.logoPath"></ion-img>
 <div id="container">
+ 
+  
   <form  #form="ngForm" (ngSubmit)="login(form)">
     <ion-grid>
       <ion-row justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          <div text-center>
-            <h3>Login</h3>
+          <div style="margin-bottom: 20px;" text-center>
+            <h3>Welcome</h3>
           </div>
           <div padding>
             <ion-item>
@@ -15,15 +19,15 @@
             </ion-item>
           </div>
           <div padding>
-            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
+            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Sign in</ion-button>
           </div>
         </ion-col>
       </ion-row>
 
       <ion-row>
-        <div text-center>
-          If you don't have an account, please <a (click)="navigateTo('register')">register</a> first
-        </div>
+        <ion-col text-center>
+          If you don't have an account, please <a (click)="navigateTo('register')">register</a> first.
+        </ion-col>
       </ion-row>
 
     </ion-grid>

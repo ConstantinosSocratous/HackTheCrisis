@@ -15,7 +15,7 @@ export class UserService {
   ]
 
   pastNotes: Array<any> = [
-    {text: 'Registration form', date: '03/04/2020', image: 'https://i.pinimg.com/originals/f7/af/84/f7af847272e17fc3a2777324d6478ea5.png'},
+    {text: 'Registration form', date: '03/04/2020', image: 'https://www.cufon.org/CRG/memo/186538J.JPG'},
     {text: 'Questionnaire about symptoms', date: '23/04/2020', image: 'https://digitalaviary.me/wp-content/uploads/2019/12/general-medical-history-forms-free-word-report-template-doc-doctors-example.jpg'},
   ]
 

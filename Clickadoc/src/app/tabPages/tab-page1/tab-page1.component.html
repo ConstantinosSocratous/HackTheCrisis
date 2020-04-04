@@ -19,7 +19,7 @@
       <ion-slide *ngFor="let note of previousNotes">
         <ion-card>
           <ion-card-header>
-              <ion-img [src]="note.image"  (click)="fullscreen(note)"></ion-img>
+              <ion-img [src]="note.image" (click)="fullscreen(note)"></ion-img>
             <ion-card-subtitle>{{ note.date }}</ion-card-subtitle>
             <!-- <ion-card-title>Card Title</ion-card-title> -->
           </ion-card-header>

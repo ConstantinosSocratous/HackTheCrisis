@@ -36,12 +36,12 @@ export class AppComponent implements OnInit {
   public tabIndex = -1
   public tabPages = [
     {
-      title: 'Notes',
+      title: 'Send Notes',
       url: 'notes',
       icon: 'send-outline'
     },
     {
-      title: 'Book',
+      title: 'Book Appointment',
       url: 'book',
       icon: 'calendar-outline'
     }
@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.menuSelected(0)
+    this.menuSelected(0)
     // this.router.navigate['page1']
 
     // const path = window.location.pathname.split('folder/')[0];

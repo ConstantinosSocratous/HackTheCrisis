@@ -4,5 +4,15 @@ ion-item{
 }
 
 ion-button{
-    --background: #062f77;
+    --background: rgb(13,6,81);
 }
+
+ion-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    width: 50%;
+    width: 100px; 
+    height: 100px;
+  }

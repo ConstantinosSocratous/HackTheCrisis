@@ -26,7 +26,7 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
   ion-menu-button {
-    color: var(--ion-color-primary);
+    color: rgb(15,193,167);
   }
   
   #container {
@@ -110,13 +110,13 @@
   }
   
   ion-menu.md ion-item.selected {
-    --background: rgba(var(--ion-color-primary-rgb), 0.14);
+    --background: rgba(15,193,167, 0.10);
     // --background: rgba(3,251,90, 0.14);
 
   }
   
   ion-menu.md ion-item.selected ion-icon {
-    color: var(--ion-color-primary);
+    color: rgb(15,193,167);
   }
   
   ion-menu.md ion-item ion-icon {
@@ -147,7 +147,7 @@
   }
   
   ion-menu.ios ion-item.selected ion-icon {
-    color: var(--ion-color-primary);
+    color: rgb(15,193,167);
   }
   
   ion-menu.ios ion-item ion-icon {
@@ -176,6 +176,6 @@
     color: var(--ion-color-medium-shade);
   }
   
-  ion-item.selected {
-    --color: var(--ion-color-primary);
+  ion-item.selected  ion-tab-button.selected  {
+    --color: rgb(15,193,167);
   }
