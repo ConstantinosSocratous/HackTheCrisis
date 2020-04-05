@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   logoPath = "../../assets/logo.png"
 
-  constructor(private user: UserService, private router: Router, private modalController: ModalController) { }
+  constructor(public user: UserService, private router: Router, private modalController: ModalController) { }
 
   ngOnInit() {}
 
