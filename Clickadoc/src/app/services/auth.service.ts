@@ -7,7 +7,7 @@ import { UserService } from './user.service';
 })
 export class AuthService implements CanActivate{
 
-  isLoggedIn: boolean = true
+  isLoggedIn: boolean = false
 
   constructor(private router: Router, private user: UserService) { }
 
