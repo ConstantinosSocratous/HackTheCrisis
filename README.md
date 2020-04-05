@@ -12,7 +12,9 @@ This is **CLICKADOC**. A tool that simply connects local healthcare with patient
 <br>6) While at the same time protecting your privacy by checking who is allowed to view your medical records. 
 <br>7) The system also compiles data for national statistics, so that relevant ministries can measure health trends, track epidemics, and make sure that national health resources are spent wisely. 
 
-**Download link** (download it from your Android phone): https://we.tl/t-6hC9uBgOWN
+<br>It's time to think about health. it's time to go digital. It's time to use CLICKADOC!
+
+<br>**Download link** (download it from your Android phone): https://we.tl/t-6hC9uBgOWN
 <br>Accept the questions asked about trusting the app or allowing the browser to download apks.
 <br>The link is available for 7 days starting today 5th of April 2020
 
