@@ -13,7 +13,6 @@ import { LoadingController } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Page1Component } from './menuPages/page1/page1.component';
-import { Page2Component } from './menuPages/page2/page2.component';
 import { TabPage1Component } from './tabPages/tab-page1/tab-page1.component';
 import { TabPage2Component } from './tabPages/tab-page2/tab-page2.component';
 import { UserService } from './services/user.service';
@@ -24,12 +23,12 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { ChatComponent } from './chat/chat.component';
+import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     Page1Component, 
-    Page2Component, 
     TabPage1Component, 
     TabPage2Component,
     LoginComponent,
@@ -37,7 +36,8 @@ import { ChatComponent } from './chat/chat.component';
     RegisterComponent,
     HomeComponent,
     IntroComponent,
-    ChatComponent
+    ChatComponent,
+    ComingsoonComponent
   ],
   entryComponents: [NotesComponent],
   imports: [

@@ -1,7 +1,6 @@
 import { NgModule, Component } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { Page1Component } from './menuPages/page1/page1.component';
-import { Page2Component } from './menuPages/page2/page2.component';
 import { TabPage1Component } from './tabPages/tab-page1/tab-page1.component';
 import { TabPage2Component } from './tabPages/tab-page2/tab-page2.component';
 import { LoginComponent } from './login/login.component';
@@ -10,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { ChatComponent } from './chat/chat.component'
+import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 
 const routes: Routes = [
   {
@@ -25,28 +25,18 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'comingsoon',
+    component: ComingsoonComponent,
+    canActivate: [AuthService]
+  },
+  {
     path: 'home',
     component: HomeComponent,
     canActivate: [AuthService]
   },
   {
-    path: 'page1',
-    component: Page1Component,
-    canActivate: [AuthService]
-  },
-  {
-    path: 'page2',
-    component: Page2Component,
-    canActivate: [AuthService]
-  },
-  {
     path: 'notes',
     component: TabPage1Component,
-    canActivate: [AuthService]
-  },
-  {
-    path: 'book',
-    component: TabPage2Component,
     canActivate: [AuthService]
   },
   {

@@ -13,41 +13,22 @@ import { UserService } from './services/user.service';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  // public menuIndex = 0;
-  // public appPages = [
-  //   {
-  //     title: 'My Account',
-  //     url: 'home',
-  //     icon: 'home' 
-  //   },
-  //   {
-  //     title: 'Past Appointments',
-  //     url: 'page1',
-  //     icon: 'archive'
-  //   },
-  //   {
-  //     title: 'Health Services',
-  //     url: 'page2',
-  //     icon: 'medkit'
-  //   },
-    
-  // ];
 
   public tabIndex = 3
   public tabPages = [
     {
       title: 'PROFILE',
-      url: 'profile',
+      url: 'comingsoon',
       icon: '../assets/PROFILE.png'
     },
     {
       title: 'CALENDAR',
-      url: '#',
+      url: 'comingsoon',
       icon: '../assets/CALENDAR.png'
     },
     {
       title: 'HISTORY',
-      url: 'page1',
+      url: 'comingsoon',
       icon: '../assets/HISTORY.png'
     },
     {
