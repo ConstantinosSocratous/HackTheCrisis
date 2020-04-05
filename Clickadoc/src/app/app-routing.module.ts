@@ -35,8 +35,8 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path: 'notes',
-    component: TabPage1Component,
+    path: 'book',
+    component: TabPage2Component,
     canActivate: [AuthService]
   },
   {
