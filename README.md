@@ -9,7 +9,7 @@ We are developing the first Healthcare Telemedicine Application for Cyprus named
 <br>5) Data ownership/ safety to make sure each patient is the owner of their own data, allowing to determine who can or cannot access their medical records
 <br>And we are also planning ahead! Click A Doc has the potential to offer Smart Symptom Documentation in an attempt to encourage preventative medicine through heart monitoring and other sensor detected information.
 
-<br>**Download link** (download it from your Android phone): https://we.tl/t-6hC9uBgOWN
+<br>**Download link** (download it from your Android phone): https://we.tl/t-0nHesZE4kI
 <br>Accept the questions asked about trusting the app or allowing the browser to download apks.
 <br>The link is available for 7 days starting today 5th of April 2020
 
